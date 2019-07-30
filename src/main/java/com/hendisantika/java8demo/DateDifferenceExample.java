@@ -30,7 +30,7 @@ public class DateDifferenceExample {
 
         //Convert long to String
         String dayDifference = Long.toString(differenceDates);
-        System.out.println("Day Differnec is " + dayDifference);
+        System.out.println("Day Difference is " + dayDifference);
     }
 
     public void calculateDifferenceBetweenDates2(){
