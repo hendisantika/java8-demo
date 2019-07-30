@@ -7,6 +7,9 @@ import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collector;
+import java.util.stream.Stream;
+
+import static java.util.stream.Collector.Characteristics.IDENTITY_FINISH;
 
 /**
  * Created by IntelliJ IDEA.
@@ -62,6 +65,12 @@ class StudentCollector implements Collector<Student, Student, Student> {
 }
 
 public class CustomCollector {
+    public static void main(String[] args) {
+        Stream<Student> studentStream = Stream.of(new Student(30), new Student(40), new Student(50), new Student(80));
+        System.out.println(studentStream.collect(new StudentCollector()).marks);
+
+    }
 }
+
 
 
