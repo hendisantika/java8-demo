@@ -13,7 +13,7 @@ import java.util.Objects;
  * Date: 2019-07-31
  * Time: 05:37
  */
-public class git  implements Cloneable {
+public class CloneableCustomer  implements Cloneable {
 
     private String firstName;
     private String lastName;
