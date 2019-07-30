@@ -2,6 +2,8 @@ package com.hendisantika.java8demo;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 import java.util.Locale;
 
@@ -15,7 +17,7 @@ import java.util.Locale;
  * Time: 05:30
  */
 public class DateDifferenceExample {
-    public void calculate_difference_between_dates() throws ParseException {
+    public void calculateDifferenceBetweenDates() throws ParseException {
         String currentDate=  "07/31/2019";
         String finalDate=  "08/17/2019";
 
@@ -29,5 +31,20 @@ public class DateDifferenceExample {
         //Convert long to String
         String dayDifference = Long.toString(differenceDates);
         System.out.println("Day Differnec is " + dayDifference);
+    }
+
+    public void calculateDifferenceBetweenDates2(){
+
+        //Use LocalDate and ChronoUnit
+        LocalDate firstDate = LocalDate.of(2017, 5, 6);
+        LocalDate currentDate = LocalDate.now();
+
+        long days = ChronoUnit.DAYS.between(firstDate, currentDate);
+        System.out.println(days);
+
+        //date calculation
+        LocalDate now = LocalDate.now();
+        LocalDate tenDaysAhead = now.plusDays(10);
+        System.out.println(tenDaysAhead.toString());
     }
 }
