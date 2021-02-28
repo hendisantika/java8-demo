@@ -2,6 +2,7 @@ package com.hendisantika.java8demo.mapreduce;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Created by IntelliJ IDEA.
@@ -30,6 +31,7 @@ public class MapReduceExample {
         Integer reduceSum = numbers.stream().reduce(0, (a, b) -> a + b);
         System.out.println(reduceSum);
 
-
+        Optional<Integer> reduceSumWithMethodReference = numbers.stream().reduce(Integer::sum);
+        System.out.println(reduceSumWithMethodReference.get());
     }
 }
