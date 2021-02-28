@@ -43,5 +43,8 @@ public class MapReduceExample {
         Integer maxvalueWithMethodReference = numbers.stream().reduce(Integer::max).get();
         System.out.println(maxvalueWithMethodReference);
 
+        String longestString = words.stream().reduce((word1, word2) -> word1.length() > word2.length() ? word1 :
+                word2).get();
+        System.out.println(longestString);
     }
 }
