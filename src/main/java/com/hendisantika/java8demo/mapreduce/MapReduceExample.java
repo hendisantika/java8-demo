@@ -33,5 +33,9 @@ public class MapReduceExample {
 
         Optional<Integer> reduceSumWithMethodReference = numbers.stream().reduce(Integer::sum);
         System.out.println(reduceSumWithMethodReference.get());
+
+        Integer mulResult = numbers.stream().reduce(1, (a, b) -> a * b);
+        System.out.println(mulResult);
+
     }
 }
