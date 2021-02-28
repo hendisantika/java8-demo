@@ -40,6 +40,8 @@ public class MapReduceExample {
         Integer maxResult = numbers.stream().reduce(0, (a, b) -> a > b ? a : b);
         System.out.println(maxResult);
 
+        Integer maxvalueWithMethodReference = numbers.stream().reduce(Integer::max).get();
+        System.out.println(maxvalueWithMethodReference);
 
     }
 }
