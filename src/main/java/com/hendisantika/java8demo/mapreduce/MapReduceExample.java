@@ -27,6 +27,9 @@ public class MapReduceExample {
         int sum1 = numbers.stream().mapToInt(i -> i).sum();
         System.out.println(sum1);
 
+        Integer reduceSum = numbers.stream().reduce(0, (a, b) -> a + b);
+        System.out.println(reduceSum);
+
 
     }
 }
