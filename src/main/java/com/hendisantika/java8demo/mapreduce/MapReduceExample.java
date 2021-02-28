@@ -37,5 +37,9 @@ public class MapReduceExample {
         Integer mulResult = numbers.stream().reduce(1, (a, b) -> a * b);
         System.out.println(mulResult);
 
+        Integer maxResult = numbers.stream().reduce(0, (a, b) -> a > b ? a : b);
+        System.out.println(maxResult);
+
+
     }
 }
