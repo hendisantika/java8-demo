@@ -17,5 +17,11 @@ public class MapReduceExample {
         List<Integer> numbers = Arrays.asList(10, 2, 5, 8, 7, 3, 15);
 
         List<String> words = Arrays.asList("corejava", "spring", "hibernate");
+
+        int sum = 0;
+        for (int no : numbers) {
+            sum += no;
+        }
+        System.out.println(sum);
     }
 }
