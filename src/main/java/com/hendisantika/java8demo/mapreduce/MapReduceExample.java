@@ -23,5 +23,10 @@ public class MapReduceExample {
             sum += no;
         }
         System.out.println(sum);
+
+        int sum1 = numbers.stream().mapToInt(i -> i).sum();
+        System.out.println(sum1);
+
+
     }
 }
